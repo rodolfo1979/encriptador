@@ -2,132 +2,43 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.1"></script>
     <title>Encriptador</title>
   </head>
   <body>
-    <h1>Encriptador</h1>
+    
     <div>
-    <label for="texto">Texto:</label>
-    <input type="text" id="texto" name="texto"><br><br>
+      
+    <h1>Encriptador</h1>
+    <br>
+    <br>
+    <label class="texto1" for="texto"> Ingrese Texto :</label>
+    <input type="text" id="texto" name="texto" ><br><br>
     <input type="radio" id="encriptar" name="accion" value="encriptar">
-    <label for="encriptar">Encriptar</label><br>
+    <label  class="encriptar" for="encriptar">Encriptar</label><br>
     <input type="radio" id="desencriptar" name="accion" value="desencriptar">
-    <label for="desencriptar">Desencriptar</label><br><br>
-    <button class="accion" onclick="realizarAccion()">Realizar Acción</button>
+    <label class="desencriptar"for="desencriptar">Desencriptar</label><br><br>
+    <button class="accion" onclick="realizarAccion()" >Realizar Acción</button>
     <button class="borrar" onclick="borrarAccion()">Borrar</button><br><br> 
-    <label for="resultado">Resultado:</label>     
+    <label class="resultado" for="resultado">Resultado:</label>     
     <input type="text" id="resultado" name="resultado"><br><br>
     <button class="copiar" onclick="copiarResultado()">Copiar</button>
     <button class="borrar" onclick="borrarResultado()">Borrar</button>
     </div>
 
+ 
+    <footer>
+      <p>Creado por Rodolfo Fallas</p>
+    </footer>
   </body>
 
+ 
 
-  <script>
-    function realizarAccion() {
-      var texto = document.getElementById("texto").value;
-      var accion = document.querySelector('input[name="accion"]:checked').value;
-      var resultado;
-      if (accion == "encriptar") {
-        resultado = encriptar(texto);
-      } else if (accion == "desencriptar") {
-        resultado = desencriptar(texto);
-      }
-      document.getElementById("resultado").value = resultado;
-    }
-    function copiarResultado() {
-      var resultado = document.getElementById("resultado");
-      resultado.select();
-      resultado.setSelectionRange(0, 99999);
-      document.execCommand("copy");
-    }
-    function borrarAccion() {
-        document.getElementById("texto").value = "";
-      }
-
-
-      function borrarResultado() {
-        document.getElementById("resultado").value = "";
-      }
-
-
-    function encriptar(texto) {
-  // Validar que solo se utilicen letras minúsculas
-  if (/[^a-z]/.test(texto)) {
-    return "Solo se permiten letras minúsculas sin acentos ni caracteres especiales";
-  }
-  let encriptado = texto.replace(/e/g, 'enter');
-  encriptado = encriptado.replace(/i/g, 'imes');
-  encriptado = encriptado.replace(/a/g, 'ai');
-  encriptado = encriptado.replace(/o/g, 'ober');
-  encriptado = encriptado.replace(/u/g, 'ufat');
-  return encriptado;
-}
-function desencriptar(texto) {
-   // Validar que solo se utilicen letras minúsculas
-       if (/[^a-z]/.test(texto)) {
-           return "Solo se permiten letras minúsculas sin acentos ni caracteres especiales";
-  }
-    let desencriptado = texto.replace(/enter/g, 'e');
-      desencriptado = desencriptado.replace(/imes/g, 'i');
-        desencriptado = desencriptado.replace(/ai/g, 'a');
-      desencriptado = desencriptado.replace(/ober/g, 'o');
-    desencriptado = desencriptado.replace(/ufat/g, 'u');
-  return desencriptado;
-}
+  
 
 
 
-    function realizarAccion() {
-  var texto = document.getElementById("texto").value;
-  var accion = document.querySelector('input[name="accion"]:checked').value;
-  var resultado;
-  if (accion == "encriptar") {
-    resultado = encriptar(texto);
-  } else if (accion == "desencriptar") {
-    resultado = desencriptar(texto);
-  }
-  document.getElementById("resultado").value = resultado;
-}
-  </script>
-
-
-  <style type="text/css">
-    
-body{
-
-  background-color:white;
-
-}
-
-h1{
-text-align: center;
-text-decoration-color: white;
-color: black;
-}
- div{
-background-color: aliceblue;
-block-size:  240px;
-text-align: center;
-  text-transform: uppercase;
-
- }
- button{
- block-size: 30px;
-background-color:palevioletred ;
-border-radius: 5px;
-
- }
- .accion{
-background-color: lightgreen;
-
- }
-
- .copiar{
-background-color: lightgreen;
-
- }
-
-  </style>
 </html>

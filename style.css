@@ -1,0 +1,76 @@
+
+  
+  h1{
+  text-align: center;
+  text-decoration-color: white;
+  color:whitesmoke;
+
+  }
+   div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+ 
+   }
+   button{
+   block-size: 30px;
+  background-color:palevioletred ;
+  border-radius: 5px;
+  
+   }
+   .accion{
+  background-color: lightgreen;
+  
+   }
+  
+   .copiar{
+  background-color: lightgreen;
+  
+   }
+   .imagenfondo{
+width: 100%;
+background-size: cover;
+
+
+   }
+   body{
+    background-image: url('https://wp.es.aleteia.org/wp-content/uploads/sites/7/2016/07/web-costa-rica-frog-nature-green-shutterstock_81590860-brandon-alms-ai.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh; /* Opcional: establece la altura de la página al 100% del viewport */
+    border: 6px solid burlywood;
+  }
+   
+  .encriptar{
+color: white;
+font-style: italic;
+  }
+
+  .desencriptar{
+    font-style: italic;
+    color: white;
+  }
+ .texto1{
+    color:white;
+    font-style: italic;
+ }
+.resultado{
+
+    color:white;
+    font-style: italic;
+}
+footer{
+    position: absolute;  
+    bottom: 0;
+    background-color: white;
+width:100%;
+height: block;
+
+    
+
+}
