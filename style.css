@@ -33,7 +33,7 @@
    }
    .imagenfondo{
 width: 100%;
-background-size: cover;
+background-size:auto;
 
 
    }
@@ -43,7 +43,10 @@ background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     height: 100vh; /* Opcional: establece la altura de la página al 100% del viewport */
-    border: 6px solid burlywood;
+    
+    display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   }
    
   .encriptar{
@@ -65,12 +68,19 @@ font-style: italic;
     font-style: italic;
 }
 footer{
-    position: absolute;  
-    bottom: 0;
+     bottom: 0;
+    position: auto;  
     background-color: white;
 width:100%;
 height: block;
+margin-top: auto;
+    }
+    footer p{
 
-    
+      text-align: center;
+    }
+main{
+  flex: 1;
+
 
 }
